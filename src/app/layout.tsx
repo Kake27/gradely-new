@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ContextProvider } from "./context/ContextProvider";
 
 
 export default function RootLayout({
@@ -9,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <ContextProvider>{children}</ContextProvider>
       </body>
     </html>
   );
